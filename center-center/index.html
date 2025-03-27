@@ -1,0 +1,85 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Centering With CSS</title>
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header><h1>Center With CSS</h1></header>
+    <main>
+      <section>
+        <h2>Display:flex</h2>
+        <div class="flex-container container">
+          <div id="flex-center"></div>
+        </div>
+        <code
+          >.flex-container { display: flex; align-items: center;
+          justify-content: center; }
+        </code>
+        <code>#flex-center { width: 10px; height: 10px; } </code>
+        <p>
+          Centering with Flexbox involves using a container that is set to
+          display "flex". Then the container must have "align-items" and
+          "justify-content" set to "center".
+        </p>
+      </section>
+      <section>
+        <h2>Transform: translateX(-50%) translateY(-50%);</h2>
+        <div class="relative-container container">
+          <div id="transform"></div>
+        </div>
+        <code>.relative-container { position: relative; } </code>
+        <code
+          >#transform { width: 10px; height: 10px; position: absolute; top: 50%;
+          left: 50%; transform: translateX(-50%) translateY(-50%); }</code
+        >
+        <p>
+          Using transform involves having to set the parent or container to
+          "relative" (or any other position value other than static, otherwise
+          the child will relate itself to the closest set ancestor). Then the
+          element intended for centering is set to "absolute" in relation to the
+          parent container. Allowing "top" and "left" to be set to "50%"",
+          putting the corder of the child in the center of the container. Then
+          using "transform" we set "translateX" and "translateY" at "-50%""
+          centers the child in relation to itself.
+        </p>
+      </section>
+      <section>
+        <h2>Transform: translate(-50%,-50%);</h2>
+        <div class="relative-container container">
+          <div id="transform-shorthand"></div>
+        </div>
+        <code
+          >#transform-shorthand { width: 10px; height: 10px; position: absolute;
+          top: 50%; left: 50%; transform: translate(-50%, -50%); }</code
+        >
+        <p>Using the short hand of "translate"</p>
+      </section>
+      <section>
+        <h2>Display:grid</h2>
+        <div class="grid-container container">
+          <div id="grid-center"></div>
+        </div>
+        <code>.grid-container { display: grid; place-items: center; }</code>
+        <code>#grid-center { width: 10px; height: 10px; }</code>
+        <p>Using grid we can using "place-items" set to "center"</p>
+      </section>
+
+      <section>
+        <h2>Margin: auto</h2>
+        <div class="relative-container container">
+          <div id="margin-center"></div>
+        </div>
+        <code
+          >#margin-center { position: absolute; width: 10px; height: 10px; top:
+          0; left: 0; right: 0; bottom: 0; margin: auto; }</code
+        >
+        <p>
+          Using "margin" "auto" works as long as the element is set to
+          "absolute" position and top, left, right and bottom art set to 0
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
