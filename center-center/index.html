@@ -57,6 +57,20 @@
         <p>Using the short hand of "translate"</p>
       </section>
       <section>
+        <h2>inset-inline-start: 50%; inset-block-start: 50%;</h2>
+        <div class="relative-container container">
+          <div id="transform-inset"></div>
+        </div>
+        <code
+          >#transform-inset { position: absolute; inset-inline-start: 50%;
+          inset-block-start: 50%; transform: translate(-50%, -50%); }</code
+        >
+        <p>
+          Using "inset-inline-start" & "inset-block-start" with short hand of
+          "translate"
+        </p>
+      </section>
+      <section>
         <h2>Display:grid</h2>
         <div class="grid-container container">
           <div id="grid-center"></div>
@@ -77,7 +91,8 @@
         >
         <p>
           Using "margin" "auto" works as long as the element is set to
-          "absolute" position and top, left, right and bottom art set to 0
+          "absolute" position and top, left, right and bottom art set to 0,
+          which can be achieved with "inset" set to 0
         </p>
       </section>
     </main>

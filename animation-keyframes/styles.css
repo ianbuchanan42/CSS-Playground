@@ -1,0 +1,39 @@
+.container {
+  border: 1px solid gray;
+  width: 100px;
+  height: 100px;
+}
+
+.relative-container {
+  position: relative;
+}
+
+#bouncing-ball {
+  position: absolute;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: darkorange;
+  border-radius: 100%;
+  transform: translateX(-50%);
+  animation-name: bounceColorChange;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  /* animation: bounceColorChange 3s infinite alternate; */
+}
+
+@keyframes bounceColorChange {
+  0% {
+    background-color: darkorange;
+    top: 0;
+  }
+  50% {
+    background-color: darkgoldenrod;
+  }
+  100% {
+    background-color: darkolivegreen;
+    top: 90px;
+    border-radius: 0%;
+  }
+}

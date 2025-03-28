@@ -66,6 +66,16 @@ code {
   transform: translate(-50%, -50%);
 }
 
+#transform-inset {
+  background-color: mediumslateblue;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  inset-inline-start: 50%;
+  inset-block-start: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* GRID */
 
 .grid-container {
@@ -86,9 +96,10 @@ code {
   position: absolute;
   width: 10px;
   height: 10px;
-  top: 0;
+  /* top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 0; */
+  inset: 0;
   margin: auto;
 }

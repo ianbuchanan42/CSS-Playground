@@ -1,0 +1,30 @@
+.container {
+  border: 1px solid gray;
+  width: 200px;
+  height: 200px;
+}
+
+.relative-container {
+  position: relative;
+}
+
+#ball {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background-color: darkorange;
+  border-radius: 100%;
+  transition-duration: 0.5s;
+  transition-property: background-color, transform;
+  transition-timing-function: ease;
+}
+
+#ball:hover {
+  background-color: darkblue;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+}
