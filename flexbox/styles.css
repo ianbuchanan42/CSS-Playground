@@ -1,0 +1,23 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+section:first-child {
+  flex-grow: 4;
+}
+
+section {
+  flex-basis: 20%;
+  height: 100px;
+  background-color: aqua;
+  border: 1px solid blueviolet;
+  position: relative;
+}
+
+section:last-child {
+  flex-grow: 4;
+}

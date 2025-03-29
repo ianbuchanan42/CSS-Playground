@@ -40,6 +40,19 @@ code {
   height: 10px;
 }
 
+/* or.... */
+
+/* .flex-container {
+  display: flex;
+}
+
+#flex-center {
+  background-color: aqua;
+  width: 10px;
+  height: 10px;
+  margin: auto;
+} */
+
 /* Transform & Translate */
 
 .relative-container {
