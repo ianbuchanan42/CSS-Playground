@@ -1,23 +1,45 @@
+/* 
+  The <main> element is turned into a flex container so that its direct children (<section> elements)
+  become flex items. Using flex-wrap allows items to wrap onto a new line if they don't all fit on one row.
+*/
 main {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: space-around;
-  gap: 10px;
+  display: flex; /* Enable flex layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next row */
 }
 
-section:first-child {
-  flex-grow: 4;
+/*
+  These styles apply to every <section> element within <main>.
+  The border, padding, and box-sizing settings are optional; they just help illustrate the layout.
+*/
+
+/* The greater than sign (>) in CSS is known as the child combinator. It selects only the direct children of a specified element.
+only the <section> elements that are immediate children of <main> will be targeted—not nested or deeper descendants. */
+
+main > section {
+  border: 1px solid #ccc; /* Optional: visualize section boundaries */
+  padding: 1em; /* Optional: add some inner spacing */
+  box-sizing: border-box; /* Include padding and border in the element's width */
 }
 
-section {
-  flex-basis: 20%;
-  height: 100px;
-  background-color: aqua;
-  border: 1px solid blueviolet;
-  position: relative;
+/*
+  The first and last sections are targeted using pseudo-classes.
+  Setting flex: 0 0 100% means:
+    - flex-grow: 0   -> the item will not grow beyond its base size.
+    - flex-shrink: 0 -> the item will not shrink.
+    - flex-basis: 100% -> the item's base size is set to 100% of the container's width.
+  This ensures the first and last <section> always span the full width of the container.
+*/
+main > section:first-child,
+main > section:last-child {
+  flex: 0 0 100%;
 }
 
-section:last-child {
-  flex-grow: 4;
+/*
+  This selector targets all sections except the first and last.
+  Setting flex: 0 0 25% makes each of these sections take up 25% of the container's width:
+    - Allows up to 4 items per row if there's enough space.
+    - The items will wrap to a new row when they exceed the container's width.
+*/
+main > section:not(:first-child):not(:last-child) {
+  flex: 0 0 20%;
 }
