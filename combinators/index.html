@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Combinators Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>CSS Combinators Demo</h1>
+
+      <!-- Example of nested elements -->
+      <div class="parent">
+        <p class="child">Child paragraph 1 (direct child)</p>
+        <p class="child">Child paragraph 2 (direct child)</p>
+        <div class="nested">
+          <p>Nested paragraph (descendant, not a direct child)</p>
+        </div>
+        <p class="child">Child paragraph 3 (direct child)</p>
+      </div>
+
+      <!-- Sibling elements to demonstrate sibling combinators -->
+      <div class="sibling1">
+        <p>Sibling 1</p>
+      </div>
+      <div class="sibling2">
+        <p>Sibling 2 (adjacent sibling of Sibling 1)</p>
+      </div>
+      <div class="sibling3">
+        <p>Sibling 3 (general sibling of Sibling 1)</p>
+      </div>
+
+      <!-- Grouping example: multiple elements selected with a comma -->
+      <div class="group">
+        <p id="one">Group Paragraph 1</p>
+        <p id="two">Group Paragraph 2</p>
+      </div>
+    </div>
+  </body>
+</html>

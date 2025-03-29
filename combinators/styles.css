@@ -1,0 +1,64 @@
+.container {
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #444;
+}
+
+/* 
+  Descendant Combinator (space):
+  This selects all <p> elements that are inside any <div> within .container.
+  It applies regardless of the level of nesting.
+*/
+.container div p {
+  color: #333;
+  font-family: sans-serif;
+}
+
+/* 
+  Child Combinator (>):
+  This selects only the direct children of .parent that have the class .child.
+  It does NOT select the <p> inside .nested, even though that <p> is a descendant.
+*/
+.parent > .child {
+  background-color: #d0eaff;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+/* 
+  Adjacent Sibling Combinator (+):
+  This selects the .sibling2 element that immediately follows .sibling1.
+  If there's any element in between, it won't be selected.
+*/
+.sibling1 + .sibling2 {
+  background-color: #ffe6e6;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* 
+  General Sibling Combinator (~):
+  This selects any .sibling3 that comes after .sibling1, regardless of immediate adjacency.
+  If there are multiple siblings following .sibling1, all of them will be styled.
+*/
+.sibling1 ~ .sibling3 {
+  background-color: #e6ffe6;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* 
+  Grouping Selector (comma):
+  This applies the same styles to both elements listed.
+  Here, it targets both paragraphs inside .group.
+*/
+.group #one,
+.group #two {
+  font-style: italic;
+  border-bottom: 1px dashed #aaa;
+  padding-bottom: 5px;
+  margin: 10px 0;
+}
